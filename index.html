@@ -401,7 +401,7 @@
 
     .case-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2px;
     }
 
@@ -574,20 +574,6 @@
       font-weight: 400;
     }
 
-    .tool-level {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      color: var(--text-dim);
-      letter-spacing: 0.08em;
-    }
-
-    .tool-level.expert {
-      color: var(--accent);
-    }
-
-    .tool-level.strong {
-      color: var(--accent2);
-    }
 
     .company-logo {
       display: block;
@@ -665,11 +651,6 @@
       background: var(--bg3);
     }
 
-    .pub-icon {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-      display: block;
-    }
 
     .pub-card h3 {
       font-family: 'Syne', sans-serif;
@@ -921,28 +902,6 @@
       }
     }
 
-    .sys-card {
-      padding: 24px;
-    }
-    }
-
-
-    .case-detail-link {
-      display: inline-block;
-      margin-top: 14px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--accent);
-      opacity: 0.7;
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: opacity 0.2s;
-    }
-
-    .case-detail-link:hover {
-      opacity: 1;
-    }
-
     .jira-workflow-img {
       width: 100%;
       border-radius: 6px;
@@ -1075,57 +1034,7 @@
 
 
     /* ── Systems Section ── */
-    .systems-section {
-      padding: 100px 48px;
-    }
 
-    .section-sub {
-      color: var(--text-muted);
-      font-size: 1rem;
-      max-width: 640px;
-      margin-bottom: 60px;
-      line-height: 1.7;
-    }
-
-    .sys-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 36px 36px 32px;
-      margin-bottom: 32px;
-    }
-
-    .sys-card-header {
-      margin-bottom: 24px;
-    }
-
-    .sys-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--accent);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: 1px solid rgba(200, 240, 96, 0.25);
-      padding: 3px 10px;
-      border-radius: 2px;
-      background: rgba(200, 240, 96, 0.05);
-    }
-
-    .sys-card h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      margin: 14px 0 10px;
-    }
-
-    .sys-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      max-width: 700px;
-      margin-bottom: 0;
-    }
 
     .sys-diagram {
       overflow-x: auto;
@@ -1194,15 +1103,6 @@
       letter-spacing: 0.04em;
     }
 
-    @media (max-width: 900px) {
-      .systems-section {
-        padding: 60px 24px;
-      }
-
-      .sys-card {
-        padding: 24px 20px;
-      }
-    }
   </style>
 </head>
 
@@ -1212,7 +1112,6 @@
     <a href="#" class="nav-logo">Yoonbean Park</a>
     <ul>
       <li><a href="#work">Work</a></li>
-      <li><a href="#systems">Systems</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#publishing">Publishing</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -1232,8 +1131,6 @@
         development. Specializing in Jira administration, pipeline optimization, and cross-functional coordination
         &mdash; from AAA live service to Steam publishing.</p>
       <div class="hero-stats">
-        <div class="hero-stat"><span class="hero-stat-num">2.5+</span><span class="hero-stat-label">Years in Game
-            Dev</span></div>
         <div class="hero-stat"><span class="hero-stat-num">95%</span><span class="hero-stat-label">Issue
             Reduction</span></div>
         <div class="hero-stat"><span class="hero-stat-num">58</span><span class="hero-stat-label">Weekly Releases
@@ -1271,12 +1168,82 @@
             </div>
           </div>
           <ul class="case-detail-list">
-            <li>Interviewed 24 stakeholders across 3 production teams to map root causes</li>
             <li>Deployed Zapier + Slack Bot automation for request routing and status notifications</li>
             <li>Locked asset schedule spreadsheet post-deadline; urgent exceptions routed through PM</li>
             <li>Automated Slack channel changelog for all SharePoint spreadsheet inputs and status updates</li>
             <li>Directors could now prepare schedules without graphical asset bottlenecks</li>
           </ul>
+          <div class="sys-diagram">
+            <svg class="pipe-svg" viewBox="0 0 900 110" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#c8f060" />
+                </marker>
+              </defs>
+
+              <rect x="4" y="22" width="112" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
+              <text x="60" y="44" text-anchor="middle" fill="#aab" font-size="11"
+                font-family="DM Sans,sans-serif">SharePoint</text>
+              <text x="60" y="59" text-anchor="middle" fill="#6677aa" font-size="9" font-family="DM Mono,monospace">Order
+                document</text>
+
+              <rect x="132" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
+              <text x="187" y="44" text-anchor="middle" fill="#aab" font-size="11"
+                font-family="DM Sans,sans-serif">Check-in</text>
+              <text x="187" y="59" text-anchor="middle" fill="#6677aa" font-size="9"
+                font-family="DM Mono,monospace">Assign task</text>
+
+              <rect x="258" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
+              <text x="313" y="44" text-anchor="middle" fill="#aab" font-size="11" font-family="DM Sans,sans-serif">Fill
+                Info</text>
+              <text x="313" y="59" text-anchor="middle" fill="#6677aa" font-size="9"
+                font-family="DM Mono,monospace">Update status</text>
+
+              <rect x="384" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
+              <text x="439" y="44" text-anchor="middle" fill="#aab" font-size="11"
+                font-family="DM Sans,sans-serif">Check-out</text>
+              <text x="439" y="59" text-anchor="middle" fill="#6677aa" font-size="9" font-family="DM Mono,monospace">Mark
+                complete</text>
+
+              <rect x="510" y="12" width="128" height="68" rx="6" fill="rgba(200,240,96,0.08)"
+                stroke="rgba(200,240,96,0.5)" stroke-width="1.5" />
+              <text x="574" y="38" text-anchor="middle" fill="#c8f060" font-size="11"
+                font-family="DM Sans,sans-serif">Auto Slack Alert</text>
+              <text x="574" y="53" text-anchor="middle" fill="#8a9940" font-size="9.5"
+                font-family="DM Mono,monospace">Channel notify</text>
+              <text x="574" y="67" text-anchor="middle" fill="#6a7730" font-size="9"
+                font-family="DM Mono,monospace">Zapier trigger</text>
+
+              <rect x="654" y="12" width="128" height="68" rx="6" fill="rgba(200,240,96,0.06)"
+                stroke="rgba(200,240,96,0.35)" stroke-width="1.5" />
+              <text x="718" y="38" text-anchor="middle" fill="#c8f060" font-size="11" font-family="DM Sans,sans-serif">Tag
+                Assignee</text>
+              <text x="718" y="53" text-anchor="middle" fill="#8a9940" font-size="9.5"
+                font-family="DM Mono,monospace">@mention posted</text>
+              <text x="718" y="67" text-anchor="middle" fill="#6a7730" font-size="9"
+                font-family="DM Mono,monospace">change details</text>
+
+              <rect x="798" y="12" width="96" height="68" rx="6" fill="rgba(200,240,96,0.03)"
+                stroke="rgba(200,240,96,0.18)" stroke-width="1" />
+              <text x="846" y="38" text-anchor="middle" fill="#aabb88" font-size="11"
+                font-family="DM Sans,sans-serif">Schedule</text>
+              <text x="846" y="53" text-anchor="middle" fill="#aabb88" font-size="11"
+                font-family="DM Sans,sans-serif">Lock</text>
+              <text x="846" y="67" text-anchor="middle" fill="#6a7730" font-size="9" font-family="DM Mono,monospace">PM
+                gates late req.</text>
+
+              <line x1="116" y1="46" x2="130" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+              <line x1="242" y1="46" x2="256" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+              <line x1="368" y1="46" x2="382" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+              <line x1="494" y1="46" x2="508" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+              <line x1="638" y1="46" x2="652" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+              <line x1="782" y1="46" x2="796" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
+
+              <text x="450" y="102" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9.5"
+                font-family="DM Mono,monospace">95% reduction in omission issues &middot; Build quality improved &middot;
+                Schedule locks enforced automatically</text>
+            </svg>
+          </div>
         </div>
 
         <div class="case-card reveal reveal-delay-1">
@@ -1289,8 +1256,6 @@
           <div class="case-metrics">
             <div class="metric"><span class="metric-val">2.5WD</span><span class="metric-label">Review time (from
                 5WD)</span></div>
-            <div class="metric"><span class="metric-val">50%</span><span class="metric-label">Time saved in
-                review</span></div>
           </div>
           <ul class="case-detail-list">
             <li>Created a dedicated issue type with "In Review" and "Revising" statuses</li>
@@ -1298,7 +1263,138 @@
             <li>Managers could now identify the exact stage causing blockage</li>
             <li>Reduced manager overhead from tracking document status manually</li>
           </ul>
-          <a href="#systems" class="case-detail-link">&#8595; See before/after workflow diagram</a>
+          <div class="sys-diagram">
+            <div class="sys-wf-label">BEFORE <span>&mdash; 4 statuses, no review state, reviewer not assigned</span></div>
+            <svg class="wf-svg" viewBox="0 0 640 128" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#555" />
+                </marker>
+              </defs>
+              <!-- To Do -->
+              <rect x="10" y="42" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
+              <text x="70" y="60" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
+                Do</text>
+              <text x="70" y="74" text-anchor="middle" fill="#556" font-size="9" font-family="DM Mono,monospace">해야 할
+                일</text>
+              <!-- In Progress -->
+              <rect x="178" y="42" width="120" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
+              <text x="238" y="60" text-anchor="middle" fill="#6699cc" font-size="11" font-family="DM Sans,sans-serif">In
+                Progress</text>
+              <text x="238" y="74" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">진행
+                중</text>
+              <!-- Done -->
+              <rect x="346" y="42" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="406" y="60" text-anchor="middle" fill="#66bb66" font-size="11"
+                font-family="DM Sans,sans-serif">Done</text>
+              <text x="406" y="74" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
+                완료</text>
+              <!-- Dropped -->
+              <rect x="514" y="42" width="110" height="38" rx="6" fill="#2a2020" stroke="#603030" stroke-width="1.5" />
+              <text x="569" y="60" text-anchor="middle" fill="#cc6666" font-size="11"
+                font-family="DM Sans,sans-serif">Dropped</text>
+              <text x="569" y="74" text-anchor="middle" fill="#6a3333" font-size="9"
+                font-family="DM Mono,monospace">드랍</text>
+              <line x1="130" y1="61" x2="176" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <line x1="298" y1="61" x2="344" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <line x1="466" y1="61" x2="512" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <rect x="155" y="98" width="310" height="24" rx="4" fill="rgba(255,80,80,0.07)"
+                stroke="rgba(255,80,80,0.22)" stroke-width="1" />
+              <text x="310" y="114" text-anchor="middle" fill="#f08080" font-size="9.5" font-family="DM Mono,monospace">No
+                reviewer assigned &middot; Blocked docs invisible &middot; No re-review path</text>
+            </svg>
+
+            <div class="sys-divider-arrow">&#9660;</div>
+
+            <div class="sys-wf-label" style="margin-top:4px">AFTER <span>&mdash; Dedicated issue type, 6 statuses, review
+                loop, reviewer auto-assigned</span></div>
+            <svg class="wf-svg" viewBox="0 0 880 218" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="a2n" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#555" />
+                </marker>
+                <marker id="a2g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#c8f060" />
+                </marker>
+                <marker id="a2r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#f06060" />
+                </marker>
+              </defs>
+              <!-- review loop highlight box -->
+              <rect x="222" y="14" width="520" height="110" rx="8" fill="rgba(200,240,96,0.04)"
+                stroke="rgba(200,240,96,0.28)" stroke-width="1.5" stroke-dasharray="6,3" />
+              <text x="482" y="9" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9"
+                font-family="DM Mono,monospace">REVIEW LOOP</text>
+
+              <!-- To Do -->
+              <rect x="10" y="54" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
+              <text x="70" y="72" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
+                Do</text>
+              <text x="70" y="85" text-anchor="middle" fill="#445" font-size="9" font-family="DM Mono,monospace">해야 할
+                일</text>
+
+              <!-- Writing Doc -->
+              <rect x="178" y="54" width="130" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
+              <text x="243" y="72" text-anchor="middle" fill="#6699cc" font-size="11"
+                font-family="DM Sans,sans-serif">Writing Doc</text>
+              <text x="243" y="85" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">기획서
+                작성</text>
+
+              <!-- In Review (highlighted) -->
+              <rect x="362" y="42" width="130" height="62" rx="6" fill="#2a2040" stroke="rgba(200,240,96,0.6)"
+                stroke-width="2" />
+              <text x="427" y="66" text-anchor="middle" fill="#c8f060" font-size="11" font-family="DM Sans,sans-serif">In
+                Review</text>
+              <text x="427" y="80" text-anchor="middle" fill="#8a9940" font-size="9"
+                font-family="DM Mono,monospace">검토</text>
+              <text x="427" y="95" text-anchor="middle" fill="#6a7730" font-size="8.5"
+                font-family="DM Mono,monospace">reviewer auto-assigned</text>
+
+              <!-- Review Approved -->
+              <rect x="550" y="54" width="140" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="620" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
+                font-family="DM Sans,sans-serif">Review Approved</text>
+              <text x="620" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">검토
+                승인</text>
+
+              <!-- Updated Doc / Revising -->
+              <rect x="362" y="148" width="130" height="44" rx="6" fill="#2a1a1a" stroke="#803030" stroke-width="1.5" />
+              <text x="427" y="167" text-anchor="middle" fill="#f08080" font-size="11"
+                font-family="DM Sans,sans-serif">Updated Doc</text>
+              <text x="427" y="181" text-anchor="middle" fill="#7a4040" font-size="9" font-family="DM Mono,monospace">기획서
+                보강</text>
+
+              <!-- Done -->
+              <rect x="748" y="54" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="808" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
+                font-family="DM Sans,sans-serif">Done</text>
+              <text x="808" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
+                완료</text>
+
+              <!-- Arrows forward -->
+              <line x1="130" y1="73" x2="176" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
+              <line x1="308" y1="73" x2="360" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
+              <line x1="492" y1="73" x2="548" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
+              <line x1="690" y1="73" x2="746" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
+
+              <!-- Reject down -->
+              <line x1="427" y1="104" x2="427" y2="146" stroke="#f06060" stroke-width="1.5" marker-end="url(#a2r)" />
+              <text x="438" y="132" fill="#f08080" font-size="9" font-family="DM Mono,monospace">rejected</text>
+
+              <!-- Revising back to In Review -->
+              <path d="M362,170 Q290,170 290,120 Q290,76 360,74" stroke="#f06060" stroke-width="1.5" fill="none"
+                marker-end="url(#a2r)" stroke-dasharray="4,3" />
+              <text x="262" y="135" fill="#c06060" font-size="9" font-family="DM Mono,monospace">재검토</text>
+              <text x="255" y="147" fill="#c06060" font-size="8.5" font-family="DM Mono,monospace">요청</text>
+
+              <!-- Result bar -->
+              <rect x="10" y="200" width="860" height="18" rx="3" fill="rgba(200,240,96,0.05)"
+                stroke="rgba(200,240,96,0.18)" stroke-width="1" />
+              <text x="440" y="213" text-anchor="middle" fill="rgba(200,240,96,0.6)" font-size="9.5"
+                font-family="DM Mono,monospace">Reviewer auto-assigned on status change &middot; Review time: 5 days
+                &#8594; 2.5 days &middot; Blockers visible to all stakeholders</text>
+            </svg>
+          </div>
         </div>
 
         <div class="case-card reveal">
@@ -1328,10 +1424,10 @@
           <p>Directors had no consolidated way to see project allocation or progress across divisions. Individual teams
             used incompatible views. Decision-making relied on verbal status updates rather than live data.</p>
           <div class="case-metrics">
-            <div class="metric"><span class="metric-val">Multi</span><span class="metric-label">Division
-                dashboards</span></div>
-            <div class="metric"><span class="metric-val">Live</span><span class="metric-label">Resource
-                visibility</span></div>
+            <div class="metric"><span class="metric-val">12</span><span class="metric-label">Team dashboards
+                built</span></div>
+            <div class="metric"><span class="metric-val">3</span><span class="metric-label">Integrated director
+                views</span></div>
           </div>
           <ul class="case-detail-list">
             <li>Built division-specific dashboards plus integrated leadership view with Rich Filters</li>
@@ -1339,6 +1435,74 @@
             <li>Managers could proactively surface risks without waiting for review meetings</li>
             <li>Build quality improved as directors could act on resourcing issues earlier</li>
           </ul>
+          <div class="sys-diagram">
+            <svg class="dash-svg" viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#444" />
+                </marker>
+              </defs>
+
+              <!-- Labels -->
+              <text x="14" y="40" fill="rgba(200,240,96,0.55)" font-size="9" font-family="DM Mono,monospace">TIER 1
+                &middot; DIRECTOR VIEW (integrated across all teams)</text>
+              <text x="14" y="118" fill="#7788aa" font-size="9" font-family="DM Mono,monospace">TIER 2 &middot; TEAM
+                DASHBOARDS (&times;3 each team)</text>
+              <text x="14" y="188" fill="#556677" font-size="9" font-family="DM Mono,monospace">TIER 3 &middot; PLANS
+                &amp; KANBAN (all teams)</text>
+
+              <!-- Director box (wide, spans all) -->
+              <rect x="14" y="46" width="592" height="40" rx="6" fill="rgba(200,240,96,0.07)"
+                stroke="rgba(200,240,96,0.38)" stroke-width="1.5" />
+              <text x="310" y="64" text-anchor="middle" fill="#c8f060" font-size="11"
+                font-family="DM Sans,sans-serif">Director Dashboards &times;3</text>
+              <text x="310" y="79" text-anchor="middle" fill="#8a9940" font-size="9.5"
+                font-family="DM Mono,monospace">Workload by Assignee (Rich Filter) &middot; Milestone Toggles &middot;
+                Sprint Progress</text>
+
+              <!-- Connector from director to each team (one line down, then branches) -->
+              <line x1="310" y1="86" x2="310" y2="100" stroke="#444" stroke-width="1" />
+              <line x1="80" y1="100" x2="540" y2="100" stroke="#444" stroke-width="1" />
+
+              <!-- Team boxes -->
+              <rect x="14" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
+              <text x="74" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">Art
+                Team</text>
+
+              <rect x="154" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
+              <text x="214" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+                font-family="DM Sans,sans-serif">Design Team</text>
+
+              <rect x="294" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
+              <text x="354" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+                font-family="DM Sans,sans-serif">Dev Team</text>
+
+              <rect x="434" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
+              <text x="494" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">QA
+                Team</text>
+
+              <!-- Connectors from branch line to teams -->
+              <line x1="74" y1="100" x2="74" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="214" y1="100" x2="214" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="354" y1="100" x2="354" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="494" y1="100" x2="494" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+
+              <!-- Plans / Kanban bar -->
+              <rect x="14" y="194" width="592" height="24" rx="5" fill="#181c28" stroke="#2a3040" stroke-width="1" />
+              <text x="310" y="210" text-anchor="middle" fill="#6677aa" font-size="11"
+                font-family="DM Sans,sans-serif">Jira Plans &amp; Kanban Boards &middot; created for every team</text>
+
+              <!-- Connectors teams to plans -->
+              <line x1="74" y1="158" x2="74" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="354" y1="158" x2="354" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
+            </svg>
+
+            <img
+              src="images/jira-dashboard.jpg"
+              alt="Jira Dashboard Rich Filter" class="sys-screenshot" />
+            <span class="sys-cap">Live dashboard &mdash; Rich Filter controller with workload distribution by assignee,
+              milestone toggles, and overdue tracker</span>
+          </div>
         </div>
 
         <div class="case-card wide reveal">
@@ -1370,345 +1534,28 @@
           </ul>
         </div>
 
+        <div class="case-card reveal">
+          <div class="case-number">06 / DOCUMENTATION</div>
+          <div class="case-tag">Confluence Admin &middot; Onboarding</div>
+          <h3>Confluence Setup &mdash; Onboarded an Entire Team onto a New Toolchain</h3>
+          <p>Managed Confluence as admin: page structures, permissions, and add-on configuration. Researched,
+            introduced, and onboarded the entire team onto the Aura plugin &mdash; translating the English
+            documentation into annotated Korean team guides.</p>
+          <ul class="case-detail-list">
+            <li>Owned page structure, permission schemes, and add-on configuration as system admin</li>
+            <li>Evaluated and introduced the Aura plugin, then drove team-wide adoption</li>
+            <li>Authored Korean usage guides with annotated GIFs from English source documentation</li>
+          </ul>
+          <div class="sys-diagram">
+            <img
+              src="images/confluence-aura-guide.jpg"
+              alt="Confluence Aura Guide" class="sys-screenshot" />
+            <span class="sys-cap">Aura usage guide authored for team onboarding &mdash; translated and annotated from
+              English documentation</span>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
-
-
-
-  <hr class="divider" />
-
-  <section class="systems-section" id="systems">
-    <div class="section-inner">
-      <p class="section-label reveal">Jira &amp; Workflow</p>
-      <h2 class="section-title reveal reveal-delay-1">Systems &amp; <span>Automation</span></h2>
-      <p class="section-sub reveal reveal-delay-2">Production infrastructure built from scratch &mdash; Jira workflows,
-        dashboards, and automation pipelines at Buttons and NCSoft.</p>
-
-      <!-- ═══ CARD 1: Game Design Workflow (combined with review workflow) ═══ -->
-      <div class="sys-card reveal reveal-delay-1">
-        <div class="sys-card-header">
-          <span class="sys-tag">Jira Admin &middot; Workflow Design</span>
-          <h3>Game Design Workflow &amp; Review Loop</h3>
-          <p class="sys-desc">The original game design task workflow had no review state and no assigned reviewer
-            &mdash; tasks were just In Progress or Done, making it impossible to see where docs were blocked. I
-            redesigned it with a dedicated issue type, a full review loop with rejection path, and auto-assigned
-            reviewers on status change. Review time dropped from 5 days to 2.5 days.</p>
-        </div>
-        <div class="sys-diagram">
-          <div class="sys-wf-label">BEFORE <span>&mdash; 4 statuses, no review state, reviewer not assigned</span></div>
-          <svg class="wf-svg" viewBox="0 0 640 128" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#555" />
-              </marker>
-            </defs>
-            <!-- To Do -->
-            <rect x="10" y="42" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
-            <text x="70" y="60" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
-              Do</text>
-            <text x="70" y="74" text-anchor="middle" fill="#556" font-size="9" font-family="DM Mono,monospace">해야 할
-              일</text>
-            <!-- In Progress -->
-            <rect x="178" y="42" width="120" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
-            <text x="238" y="60" text-anchor="middle" fill="#6699cc" font-size="11" font-family="DM Sans,sans-serif">In
-              Progress</text>
-            <text x="238" y="74" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">진행
-              중</text>
-            <!-- Done -->
-            <rect x="346" y="42" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-            <text x="406" y="60" text-anchor="middle" fill="#66bb66" font-size="11"
-              font-family="DM Sans,sans-serif">Done</text>
-            <text x="406" y="74" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
-              완료</text>
-            <!-- Dropped -->
-            <rect x="514" y="42" width="110" height="38" rx="6" fill="#2a2020" stroke="#603030" stroke-width="1.5" />
-            <text x="569" y="60" text-anchor="middle" fill="#cc6666" font-size="11"
-              font-family="DM Sans,sans-serif">Dropped</text>
-            <text x="569" y="74" text-anchor="middle" fill="#6a3333" font-size="9"
-              font-family="DM Mono,monospace">드랍</text>
-            <line x1="130" y1="61" x2="176" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-            <line x1="298" y1="61" x2="344" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-            <line x1="466" y1="61" x2="512" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-            <rect x="155" y="98" width="310" height="24" rx="4" fill="rgba(255,80,80,0.07)"
-              stroke="rgba(255,80,80,0.22)" stroke-width="1" />
-            <text x="310" y="114" text-anchor="middle" fill="#f08080" font-size="9.5" font-family="DM Mono,monospace">No
-              reviewer assigned &middot; Blocked docs invisible &middot; No re-review path</text>
-          </svg>
-
-          <div class="sys-divider-arrow">&#9660;</div>
-
-          <div class="sys-wf-label" style="margin-top:4px">AFTER <span>&mdash; Dedicated issue type, 6 statuses, review
-              loop, reviewer auto-assigned</span></div>
-          <svg class="wf-svg" viewBox="0 0 880 218" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <marker id="a2n" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#555" />
-              </marker>
-              <marker id="a2g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#c8f060" />
-              </marker>
-              <marker id="a2r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#f06060" />
-              </marker>
-            </defs>
-            <!-- review loop highlight box -->
-            <rect x="222" y="14" width="520" height="110" rx="8" fill="rgba(200,240,96,0.04)"
-              stroke="rgba(200,240,96,0.28)" stroke-width="1.5" stroke-dasharray="6,3" />
-            <text x="482" y="9" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9"
-              font-family="DM Mono,monospace">REVIEW LOOP</text>
-
-            <!-- To Do -->
-            <rect x="10" y="54" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
-            <text x="70" y="72" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
-              Do</text>
-            <text x="70" y="85" text-anchor="middle" fill="#445" font-size="9" font-family="DM Mono,monospace">해야 할
-              일</text>
-
-            <!-- Writing Doc -->
-            <rect x="178" y="54" width="130" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
-            <text x="243" y="72" text-anchor="middle" fill="#6699cc" font-size="11"
-              font-family="DM Sans,sans-serif">Writing Doc</text>
-            <text x="243" y="85" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">기획서
-              작성</text>
-
-            <!-- In Review (highlighted) -->
-            <rect x="362" y="42" width="130" height="62" rx="6" fill="#2a2040" stroke="rgba(200,240,96,0.6)"
-              stroke-width="2" />
-            <text x="427" y="66" text-anchor="middle" fill="#c8f060" font-size="11" font-family="DM Sans,sans-serif">In
-              Review</text>
-            <text x="427" y="80" text-anchor="middle" fill="#8a9940" font-size="9"
-              font-family="DM Mono,monospace">검토</text>
-            <text x="427" y="95" text-anchor="middle" fill="#6a7730" font-size="8.5"
-              font-family="DM Mono,monospace">reviewer auto-assigned</text>
-
-            <!-- Review Approved -->
-            <rect x="550" y="54" width="140" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-            <text x="620" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
-              font-family="DM Sans,sans-serif">Review Approved</text>
-            <text x="620" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">검토
-              승인</text>
-
-            <!-- Updated Doc / Revising -->
-            <rect x="362" y="148" width="130" height="44" rx="6" fill="#2a1a1a" stroke="#803030" stroke-width="1.5" />
-            <text x="427" y="167" text-anchor="middle" fill="#f08080" font-size="11"
-              font-family="DM Sans,sans-serif">Updated Doc</text>
-            <text x="427" y="181" text-anchor="middle" fill="#7a4040" font-size="9" font-family="DM Mono,monospace">기획서
-              보강</text>
-
-            <!-- Done -->
-            <rect x="748" y="54" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-            <text x="808" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
-              font-family="DM Sans,sans-serif">Done</text>
-            <text x="808" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
-              완료</text>
-
-            <!-- Arrows forward -->
-            <line x1="130" y1="73" x2="176" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
-            <line x1="308" y1="73" x2="360" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
-            <line x1="492" y1="73" x2="548" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
-            <line x1="690" y1="73" x2="746" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
-
-            <!-- Reject down -->
-            <line x1="427" y1="104" x2="427" y2="146" stroke="#f06060" stroke-width="1.5" marker-end="url(#a2r)" />
-            <text x="438" y="132" fill="#f08080" font-size="9" font-family="DM Mono,monospace">rejected</text>
-
-            <!-- Revising back to In Review -->
-            <path d="M362,170 Q290,170 290,120 Q290,76 360,74" stroke="#f06060" stroke-width="1.5" fill="none"
-              marker-end="url(#a2r)" stroke-dasharray="4,3" />
-            <text x="262" y="135" fill="#c06060" font-size="9" font-family="DM Mono,monospace">재검토</text>
-            <text x="255" y="147" fill="#c06060" font-size="8.5" font-family="DM Mono,monospace">요청</text>
-
-            <!-- Result bar -->
-            <rect x="10" y="200" width="860" height="18" rx="3" fill="rgba(200,240,96,0.05)"
-              stroke="rgba(200,240,96,0.18)" stroke-width="1" />
-            <text x="440" y="213" text-anchor="middle" fill="rgba(200,240,96,0.6)" font-size="9.5"
-              font-family="DM Mono,monospace">Reviewer auto-assigned on status change &middot; Review time: 5 days
-              &#8594; 2.5 days &middot; Blockers visible to all stakeholders</text>
-          </svg>
-        </div>
-      </div>
-
-      <!-- ═══ CARD 2: Dashboard Architecture ═══ -->
-      <div class="sys-card reveal reveal-delay-2">
-        <div class="sys-card-header">
-          <span class="sys-tag">Jira Admin &middot; Rich Filters &middot; Plans</span>
-          <h3>Dashboard &amp; Visibility Architecture</h3>
-          <p class="sys-desc">Built 12 team-level dashboards and 3 integrated director views, plus Jira Plans and Kanban
-            boards for every team. Directors got real-time allocation and progress at a glance; team leads could track
-            blockers and milestones independently.</p>
-        </div>
-        <div class="sys-diagram">
-          <svg class="dash-svg" viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#444" />
-              </marker>
-            </defs>
-
-            <!-- Labels -->
-            <text x="14" y="40" fill="rgba(200,240,96,0.55)" font-size="9" font-family="DM Mono,monospace">TIER 1
-              &middot; DIRECTOR VIEW (integrated across all teams)</text>
-            <text x="14" y="118" fill="#7788aa" font-size="9" font-family="DM Mono,monospace">TIER 2 &middot; TEAM
-              DASHBOARDS (&times;3 each team)</text>
-            <text x="14" y="188" fill="#556677" font-size="9" font-family="DM Mono,monospace">TIER 3 &middot; PLANS
-              &amp; KANBAN (all teams)</text>
-
-            <!-- Director box (wide, spans all) -->
-            <rect x="14" y="46" width="592" height="40" rx="6" fill="rgba(200,240,96,0.07)"
-              stroke="rgba(200,240,96,0.38)" stroke-width="1.5" />
-            <text x="310" y="64" text-anchor="middle" fill="#c8f060" font-size="11"
-              font-family="DM Sans,sans-serif">Director Dashboards &times;3</text>
-            <text x="310" y="79" text-anchor="middle" fill="#8a9940" font-size="9.5"
-              font-family="DM Mono,monospace">Workload by Assignee (Rich Filter) &middot; Milestone Toggles &middot;
-              Sprint Progress</text>
-
-            <!-- Connector from director to each team (one line down, then branches) -->
-            <line x1="310" y1="86" x2="310" y2="100" stroke="#444" stroke-width="1" />
-            <line x1="80" y1="100" x2="540" y2="100" stroke="#444" stroke-width="1" />
-
-            <!-- Team boxes -->
-            <rect x="14" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-            <text x="74" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">Art
-              Team</text>
-
-            <rect x="154" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-            <text x="214" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
-              font-family="DM Sans,sans-serif">Design Team</text>
-
-            <rect x="294" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-            <text x="354" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
-              font-family="DM Sans,sans-serif">Dev Team</text>
-
-            <rect x="434" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-            <text x="494" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">QA
-              Team</text>
-
-            <!-- Connectors from branch line to teams -->
-            <line x1="74" y1="100" x2="74" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-            <line x1="214" y1="100" x2="214" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-            <line x1="354" y1="100" x2="354" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-            <line x1="494" y1="100" x2="494" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-
-            <!-- Plans / Kanban bar -->
-            <rect x="14" y="194" width="592" height="24" rx="5" fill="#181c28" stroke="#2a3040" stroke-width="1" />
-            <text x="310" y="210" text-anchor="middle" fill="#6677aa" font-size="11"
-              font-family="DM Sans,sans-serif">Jira Plans &amp; Kanban Boards &middot; created for every team</text>
-
-            <!-- Connectors teams to plans -->
-            <line x1="74" y1="158" x2="74" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
-            <line x1="354" y1="158" x2="354" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
-          </svg>
-
-          <img
-            src="images/jira-dashboard.jpg"
-            alt="Jira Dashboard Rich Filter" class="sys-screenshot" />
-          <span class="sys-cap">Live dashboard &mdash; Rich Filter controller with workload distribution by assignee,
-            milestone toggles, and overdue tracker</span>
-        </div>
-      </div>
-
-      <!-- ═══ CARD 3: Art Order Automation ═══ -->
-      <div class="sys-card reveal reveal-delay-1">
-        <div class="sys-card-header">
-          <span class="sys-tag">Zapier &middot; Power Automate &middot; Slack Bot</span>
-          <h3>Art Order Automation Pipeline</h3>
-          <p class="sys-desc">Art requests were tracked manually in a shared spreadsheet &mdash; assignees were
-            forgotten, status changes weren&apos;t communicated, and late requests broke the build schedule. I built a
-            full pipeline connecting SharePoint to Slack, automating all notifications and enforcing schedule locks. 95%
-            reduction in omission issues.</p>
-        </div>
-        <div class="sys-diagram">
-          <svg class="pipe-svg" viewBox="0 0 900 110" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L0,6 L8,3 z" fill="#c8f060" />
-              </marker>
-            </defs>
-
-            <rect x="4" y="22" width="112" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
-            <text x="60" y="44" text-anchor="middle" fill="#aab" font-size="11"
-              font-family="DM Sans,sans-serif">SharePoint</text>
-            <text x="60" y="59" text-anchor="middle" fill="#6677aa" font-size="9" font-family="DM Mono,monospace">Order
-              document</text>
-
-            <rect x="132" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
-            <text x="187" y="44" text-anchor="middle" fill="#aab" font-size="11"
-              font-family="DM Sans,sans-serif">Check-in</text>
-            <text x="187" y="59" text-anchor="middle" fill="#6677aa" font-size="9"
-              font-family="DM Mono,monospace">Assign task</text>
-
-            <rect x="258" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
-            <text x="313" y="44" text-anchor="middle" fill="#aab" font-size="11" font-family="DM Sans,sans-serif">Fill
-              Info</text>
-            <text x="313" y="59" text-anchor="middle" fill="#6677aa" font-size="9"
-              font-family="DM Mono,monospace">Update status</text>
-
-            <rect x="384" y="22" width="110" height="48" rx="6" fill="#1a2433" stroke="#2a3a55" stroke-width="1.5" />
-            <text x="439" y="44" text-anchor="middle" fill="#aab" font-size="11"
-              font-family="DM Sans,sans-serif">Check-out</text>
-            <text x="439" y="59" text-anchor="middle" fill="#6677aa" font-size="9" font-family="DM Mono,monospace">Mark
-              complete</text>
-
-            <rect x="510" y="12" width="128" height="68" rx="6" fill="rgba(200,240,96,0.08)"
-              stroke="rgba(200,240,96,0.5)" stroke-width="1.5" />
-            <text x="574" y="38" text-anchor="middle" fill="#c8f060" font-size="11"
-              font-family="DM Sans,sans-serif">Auto Slack Alert</text>
-            <text x="574" y="53" text-anchor="middle" fill="#8a9940" font-size="9.5"
-              font-family="DM Mono,monospace">Channel notify</text>
-            <text x="574" y="67" text-anchor="middle" fill="#6a7730" font-size="9"
-              font-family="DM Mono,monospace">Zapier trigger</text>
-
-            <rect x="654" y="12" width="128" height="68" rx="6" fill="rgba(200,240,96,0.06)"
-              stroke="rgba(200,240,96,0.35)" stroke-width="1.5" />
-            <text x="718" y="38" text-anchor="middle" fill="#c8f060" font-size="11" font-family="DM Sans,sans-serif">Tag
-              Assignee</text>
-            <text x="718" y="53" text-anchor="middle" fill="#8a9940" font-size="9.5"
-              font-family="DM Mono,monospace">@mention posted</text>
-            <text x="718" y="67" text-anchor="middle" fill="#6a7730" font-size="9"
-              font-family="DM Mono,monospace">change details</text>
-
-            <rect x="798" y="12" width="96" height="68" rx="6" fill="rgba(200,240,96,0.03)"
-              stroke="rgba(200,240,96,0.18)" stroke-width="1" />
-            <text x="846" y="38" text-anchor="middle" fill="#aabb88" font-size="11"
-              font-family="DM Sans,sans-serif">Schedule</text>
-            <text x="846" y="53" text-anchor="middle" fill="#aabb88" font-size="11"
-              font-family="DM Sans,sans-serif">Lock</text>
-            <text x="846" y="67" text-anchor="middle" fill="#6a7730" font-size="9" font-family="DM Mono,monospace">PM
-              gates late req.</text>
-
-            <line x1="116" y1="46" x2="130" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-            <line x1="242" y1="46" x2="256" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-            <line x1="368" y1="46" x2="382" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-            <line x1="494" y1="46" x2="508" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-            <line x1="638" y1="46" x2="652" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-            <line x1="782" y1="46" x2="796" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
-
-            <text x="450" y="102" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9.5"
-              font-family="DM Mono,monospace">95% reduction in omission issues &middot; Build quality improved &middot;
-              Schedule locks enforced automatically</text>
-          </svg>
-        </div>
-      </div>
-
-      <!-- ═══ CARD 4: Confluence ═══ -->
-      <div class="sys-card reveal reveal-delay-2">
-        <div class="sys-card-header">
-          <span class="sys-tag">Confluence Admin &middot; Documentation</span>
-          <h3>Confluence Setup &amp; Team Onboarding</h3>
-          <p class="sys-desc">Managed Confluence as admin: page structures, permissions, and add-on configuration.
-            Researched, introduced, and onboarded the entire team onto the Aura plugin &mdash; translating English
-            documentation with annotated GIFs into Korean team guides.</p>
-        </div>
-        <div class="sys-diagram">
-          <img
-            src="images/confluence-aura-guide.jpg"
-            alt="Confluence Aura Guide" class="sys-screenshot" />
-          <span class="sys-cap">Aura usage guide authored for team onboarding &mdash; translated and annotated from
-            English documentation</span>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -1723,12 +1570,10 @@
         <div class="tool-category reveal">
           <div class="tool-cat-label">Project Management</div>
           <ul class="tool-list">
-            <li class="tool-item"><span class="tool-name">Jira (Admin)</span><span
-                class="tool-level expert">Expert</span></li>
-            <li class="tool-item"><span class="tool-name">Confluence (Admin)</span><span
-                class="tool-level expert">Expert</span></li>
-            <li class="tool-item"><span class="tool-name">Miro</span><span class="tool-level strong">Strong</span></li>
-            <li class="tool-item"><span class="tool-name">Notion</span><span class="tool-level strong">Strong</span>
+            <li class="tool-item"><span class="tool-name">Jira (Admin)</span></li>
+            <li class="tool-item"><span class="tool-name">Confluence (Admin)</span></li>
+            <li class="tool-item"><span class="tool-name">Miro</span></li>
+            <li class="tool-item"><span class="tool-name">Notion</span>
             </li>
           </ul>
         </div>
@@ -1736,40 +1581,34 @@
         <div class="tool-category reveal reveal-delay-1">
           <div class="tool-cat-label">Automation &amp; Workflow</div>
           <ul class="tool-list">
-            <li class="tool-item"><span class="tool-name">Zapier</span><span class="tool-level expert">Expert</span>
+            <li class="tool-item"><span class="tool-name">Zapier</span>
             </li>
-            <li class="tool-item"><span class="tool-name">Power Automate</span><span
-                class="tool-level">Proficient</span></li>
-            <li class="tool-item"><span class="tool-name">N8N</span><span class="tool-level strong">Strong</span></li>
-            <li class="tool-item"><span class="tool-name">Slack Bots / MCP</span><span
-                class="tool-level strong">Strong</span></li>
+            <li class="tool-item"><span class="tool-name">Power Automate</span></li>
+            <li class="tool-item"><span class="tool-name">N8N</span></li>
+            <li class="tool-item"><span class="tool-name">Slack Bots / MCP</span></li>
           </ul>
         </div>
 
         <div class="tool-category reveal reveal-delay-2">
           <div class="tool-cat-label">Dev &amp; Release Pipeline</div>
           <ul class="tool-list">
-            <li class="tool-item"><span class="tool-name">Perforce</span><span class="tool-level strong">Strong</span>
+            <li class="tool-item"><span class="tool-name">Perforce</span>
             </li>
-            <li class="tool-item"><span class="tool-name">Jenkins</span><span class="tool-level strong">Strong</span>
+            <li class="tool-item"><span class="tool-name">Jenkins</span>
             </li>
-            <li class="tool-item"><span class="tool-name">Steamworks</span><span class="tool-level expert">Expert</span>
+            <li class="tool-item"><span class="tool-name">Steamworks</span>
             </li>
-            <li class="tool-item"><span class="tool-name">Unreal Engine (UE4/5)</span><span class="tool-level">PM
-                context</span></li>
+            <li class="tool-item"><span class="tool-name">Unreal Engine (UE4/5)</span></li>
           </ul>
         </div>
 
         <div class="tool-category reveal reveal-delay-3">
           <div class="tool-cat-label">Communication</div>
           <ul class="tool-list">
-            <li class="tool-item"><span class="tool-name">Slack</span><span class="tool-level expert">Expert</span></li>
-            <li class="tool-item"><span class="tool-name">Microsoft Teams</span><span
-                class="tool-level expert">Expert</span></li>
-            <li class="tool-item"><span class="tool-name">Korean / English</span><span class="tool-level expert">Native
-                / Fluent</span></li>
-            <li class="tool-item"><span class="tool-name">TOEFL 112, TOEIC 980</span><span
-                class="tool-level">Certified</span></li>
+            <li class="tool-item"><span class="tool-name">Slack</span></li>
+            <li class="tool-item"><span class="tool-name">Microsoft Teams</span></li>
+            <li class="tool-item"><span class="tool-name">Korean (native) / English (fluent)</span></li>
+            <li class="tool-item"><span class="tool-name">TOEFL 112</span></li>
           </ul>
         </div>
 
@@ -1786,42 +1625,36 @@
       <div class="pub-grid">
 
         <div class="pub-card reveal">
-          <span class="pub-icon">&#127918;</span>
           <h3>Steam Store &amp; Steamworks</h3>
           <p>Set up the full Steamworks pipeline for Eldritch Survivors &mdash; depots, branches, build submissions,
             achievement integration, and store page copy in both English and Korean.</p>
         </div>
 
         <div class="pub-card reveal reveal-delay-1">
-          <span class="pub-icon">&#128203;</span>
           <h3>Korean Game Rating Board</h3>
           <p>Authored and submitted all documentation for GRAC certification. Managed issue resolution and external
             communication through the full review process.</p>
         </div>
 
         <div class="pub-card reveal reveal-delay-2">
-          <span class="pub-icon">&#128197;</span>
           <h3>Full Release Coordination</h3>
           <p>Planned and executed the complete release schedule from pre-launch through Steam Next Fest participation to
             launch day &mdash; ensuring every publishing dependency was tracked and met.</p>
         </div>
 
         <div class="pub-card reveal reveal-delay-1">
-          <span class="pub-icon">&#9997;</span>
           <h3>Copy &amp; Localization</h3>
           <p>Wrote, translated, and reviewed official product descriptions and marketing copy in both Korean and
             English. Translated all Steam documentation including API guides and onboarding materials.</p>
         </div>
 
         <div class="pub-card reveal reveal-delay-2">
-          <span class="pub-icon">&#128202;</span>
           <h3>Market Research</h3>
           <p>Conducted competitive pricing research and market analysis to inform go-to-market strategy. Developed the
             pricing proposal presented to leadership.</p>
         </div>
 
         <div class="pub-card reveal reveal-delay-3">
-          <span class="pub-icon">&#129309;</span>
           <h3>Vendor &amp; Community Management</h3>
           <p>Managed external communication with marketing and community management vendors. Collected and synthesized
             user feedback from Discord and Steam forums for stakeholder reporting.</p>
