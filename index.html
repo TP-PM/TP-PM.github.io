@@ -5,6 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yoonbean (Trevor) Park - Technical Project Manager</title>
+  <meta name="description" content="Technical Project Manager specialising in release pipelines, Jira architecture and production automation. 58 consecutive weekly releases, 600+ outsourced assets delivered, shipped on Steam." />
+  <link rel="canonical" href="https://tp-pm.github.io/" />
+  <meta name="theme-color" content="#0a0a0c" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tp-pm.github.io/" />
+  <meta property="og:site_name" content="Yoonbean (Trevor) Park" />
+  <meta property="og:title" content="Yoonbean (Trevor) Park &mdash; Technical Project Manager" />
+  <meta property="og:description" content="Technical Project Manager specialising in release pipelines, Jira architecture and production automation. 58 consecutive weekly releases, 600+ outsourced assets delivered, shipped on Steam." />
+  <meta property="og:image" content="https://tp-pm.github.io/images/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Yoonbean (Trevor) Park, Technical Project Manager &mdash; release pipelines, Jira architecture, production automation" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yoonbean (Trevor) Park &mdash; Technical Project Manager" />
+  <meta name="twitter:description" content="Technical Project Manager specialising in release pipelines, Jira architecture and production automation. 58 consecutive weekly releases, 600+ outsourced assets delivered, shipped on Steam." />
+  <meta name="twitter:image" content="https://tp-pm.github.io/images/og-card.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; viewBox=&apos;0 0 32 32&apos;%3E%3Crect width=&apos;32&apos; height=&apos;32&apos; rx=&apos;6&apos; fill=&apos;%230a0a0c&apos;/%3E%3Ctext x=&apos;16&apos; y=&apos;22&apos; text-anchor=&apos;middle&apos; font-family=&apos;sans-serif&apos; font-size=&apos;16&apos; font-weight=&apos;700&apos; fill=&apos;%23c8f060&apos;%3ET%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -92,6 +112,56 @@
       list-style: none;
       display: flex;
       gap: 36px;
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      gap: 9px;
+      background: none;
+      border: 1px solid var(--border-active);
+      border-radius: 3px;
+      padding: 7px 12px;
+      cursor: pointer;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-toggle:hover,
+    .nav-toggle:focus-visible {
+      color: var(--accent);
+      border-color: rgba(200, 240, 96, 0.45);
+    }
+
+    .nav-toggle-bars,
+    .nav-toggle-bars::before,
+    .nav-toggle-bars::after {
+      display: block;
+      width: 15px;
+      height: 1.5px;
+      background: currentColor;
+    }
+
+    .nav-toggle-bars {
+      position: relative;
+    }
+
+    .nav-toggle-bars::before,
+    .nav-toggle-bars::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    .nav-toggle-bars::before {
+      top: -5px;
+    }
+
+    .nav-toggle-bars::after {
+      top: 5px;
     }
 
     nav a {
@@ -1107,6 +1177,62 @@
       letter-spacing: 0.04em;
     }
 
+
+    /* below this width the five nav items cannot fit beside the logo */
+    @media (max-width: 760px) {
+      nav {
+        flex-wrap: wrap;
+        padding: 14px 20px;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+
+      nav ul.is-open {
+        display: flex;
+      }
+
+      nav ul li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav ul li:last-child {
+        border-bottom: none;
+      }
+
+      nav ul a {
+        display: block;
+        padding: 14px 2px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 
@@ -1114,7 +1240,11 @@
 
   <nav>
     <a href="#" class="nav-logo">Yoonbean Park</a>
-    <ul>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="#work">Work</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#publishing">Publishing</a></li>
@@ -1849,9 +1979,26 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(function (el) { observer.observe(el); });
 
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    function setNav(open) {
+      navMenu.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    }
+
+    navToggle.addEventListener('click', function () {
+      setNav(navToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setNav(false);
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
+        setNav(false);
         var target = document.querySelector(this.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
