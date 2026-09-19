@@ -1178,7 +1178,7 @@
             <li>Directors could now prepare schedules without graphical asset bottlenecks</li>
           </ul>
           <div class="sys-diagram">
-            <svg class="pipe-svg" viewBox="0 0 900 110" xmlns="http://www.w3.org/2000/svg">
+            <svg class="pipe-svg" viewBox="0 0 940 110" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                   <path d="M0,0 L0,6 L8,3 z" fill="#c8f060" />
@@ -1227,14 +1227,12 @@
               <text x="718" y="67" text-anchor="middle" fill="#6a7730" font-size="9"
                 font-family="DM Mono,monospace">change details</text>
 
-              <rect x="798" y="12" width="96" height="68" rx="6" fill="rgba(200,240,96,0.03)"
+              <rect x="798" y="12" width="136" height="68" rx="6" fill="rgba(200,240,96,0.03)"
                 stroke="rgba(200,240,96,0.18)" stroke-width="1" />
-              <text x="846" y="38" text-anchor="middle" fill="#aabb88" font-size="11"
-                font-family="DM Sans,sans-serif">Schedule</text>
-              <text x="846" y="53" text-anchor="middle" fill="#aabb88" font-size="11"
-                font-family="DM Sans,sans-serif">Lock</text>
-              <text x="846" y="67" text-anchor="middle" fill="#6a7730" font-size="9" font-family="DM Mono,monospace">PM
-                gates late req.</text>
+              <text x="866" y="44" text-anchor="middle" fill="#aabb88" font-size="11"
+                font-family="DM Sans,sans-serif">Schedule Lock</text>
+              <text x="866" y="60" text-anchor="middle" fill="#6a7730" font-size="9"
+                font-family="DM Mono,monospace">PM gates late req.</text>
 
               <line x1="116" y1="46" x2="130" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
               <line x1="242" y1="46" x2="256" y2="46" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a4)" />
@@ -1369,50 +1367,39 @@
           </ul>
           <div class="sys-diagram">
             <div class="sys-wf-label">BEFORE <span>&mdash; 4 statuses, no review state, reviewer not assigned</span></div>
-            <svg class="wf-svg" viewBox="0 0 640 128" xmlns="http://www.w3.org/2000/svg">
+            <svg class="wf-svg" viewBox="0 0 640 118" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                   <path d="M0,0 L0,6 L8,3 z" fill="#555" />
                 </marker>
               </defs>
-              <!-- To Do -->
-              <rect x="10" y="42" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
-              <text x="70" y="60" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
-                Do</text>
-              <text x="70" y="74" text-anchor="middle" fill="#556" font-size="9" font-family="DM Mono,monospace">해야 할
-                일</text>
-              <!-- In Progress -->
-              <rect x="178" y="42" width="120" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
-              <text x="238" y="60" text-anchor="middle" fill="#6699cc" font-size="11" font-family="DM Sans,sans-serif">In
-                Progress</text>
-              <text x="238" y="74" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">진행
-                중</text>
-              <!-- Done -->
-              <rect x="346" y="42" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-              <text x="406" y="60" text-anchor="middle" fill="#66bb66" font-size="11"
+              <rect x="10" y="34" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
+              <text x="70" y="57" text-anchor="middle" fill="#8899bb" font-size="11"
+                font-family="DM Sans,sans-serif">To Do</text>
+              <rect x="178" y="34" width="120" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
+              <text x="238" y="57" text-anchor="middle" fill="#6699cc" font-size="11"
+                font-family="DM Sans,sans-serif">In Progress</text>
+              <rect x="346" y="34" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="406" y="57" text-anchor="middle" fill="#66bb66" font-size="11"
                 font-family="DM Sans,sans-serif">Done</text>
-              <text x="406" y="74" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
-                완료</text>
-              <!-- Dropped -->
-              <rect x="514" y="42" width="110" height="38" rx="6" fill="#2a2020" stroke="#603030" stroke-width="1.5" />
-              <text x="569" y="60" text-anchor="middle" fill="#cc6666" font-size="11"
+              <rect x="514" y="34" width="110" height="38" rx="6" fill="#2a2020" stroke="#603030" stroke-width="1.5" />
+              <text x="569" y="57" text-anchor="middle" fill="#cc6666" font-size="11"
                 font-family="DM Sans,sans-serif">Dropped</text>
-              <text x="569" y="74" text-anchor="middle" fill="#6a3333" font-size="9"
-                font-family="DM Mono,monospace">드랍</text>
-              <line x1="130" y1="61" x2="176" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-              <line x1="298" y1="61" x2="344" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-              <line x1="466" y1="61" x2="512" y2="61" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
-              <rect x="155" y="98" width="310" height="24" rx="4" fill="rgba(255,80,80,0.07)"
+              <line x1="130" y1="53" x2="176" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <line x1="298" y1="53" x2="344" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <line x1="466" y1="53" x2="512" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#a1)" />
+              <rect x="112" y="88" width="396" height="24" rx="4" fill="rgba(255,80,80,0.07)"
                 stroke="rgba(255,80,80,0.22)" stroke-width="1" />
-              <text x="310" y="114" text-anchor="middle" fill="#f08080" font-size="9.5" font-family="DM Mono,monospace">No
-                reviewer assigned &middot; Blocked docs invisible &middot; No re-review path</text>
+              <text x="310" y="104" text-anchor="middle" fill="#f08080" font-size="9.5"
+                font-family="DM Mono,monospace">No reviewer assigned &middot; Blocked docs invisible &middot; No
+                re-review path</text>
             </svg>
 
             <div class="sys-divider-arrow">&#9660;</div>
 
             <div class="sys-wf-label" style="margin-top:4px">AFTER <span>&mdash; Dedicated issue type, 6 statuses, review
                 loop, reviewer auto-assigned</span></div>
-            <svg class="wf-svg" viewBox="0 0 880 218" xmlns="http://www.w3.org/2000/svg">
+            <svg class="wf-svg" viewBox="0 0 880 236" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="a2n" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                   <path d="M0,0 L0,6 L8,3 z" fill="#555" />
@@ -1424,77 +1411,59 @@
                   <path d="M0,0 L0,6 L8,3 z" fill="#f06060" />
                 </marker>
               </defs>
-              <!-- review loop highlight box -->
-              <rect x="222" y="14" width="520" height="110" rx="8" fill="rgba(200,240,96,0.04)"
+
+              <!-- the loop is In Review <-> Updated Doc; entry and exit sit outside it -->
+              <rect x="322" y="20" width="200" height="176" rx="8" fill="rgba(200,240,96,0.04)"
                 stroke="rgba(200,240,96,0.28)" stroke-width="1.5" stroke-dasharray="6,3" />
-              <text x="482" y="9" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9"
+              <text x="422" y="14" text-anchor="middle" fill="rgba(200,240,96,0.5)" font-size="9"
                 font-family="DM Mono,monospace">REVIEW LOOP</text>
 
-              <!-- To Do -->
               <rect x="10" y="54" width="120" height="38" rx="6" fill="#1e2433" stroke="#3a4060" stroke-width="1.5" />
-              <text x="70" y="72" text-anchor="middle" fill="#8899bb" font-size="11" font-family="DM Sans,sans-serif">To
-                Do</text>
-              <text x="70" y="85" text-anchor="middle" fill="#445" font-size="9" font-family="DM Mono,monospace">해야 할
-                일</text>
+              <text x="70" y="77" text-anchor="middle" fill="#8899bb" font-size="11"
+                font-family="DM Sans,sans-serif">To Do</text>
 
-              <!-- Writing Doc -->
               <rect x="178" y="54" width="130" height="38" rx="6" fill="#1a3050" stroke="#2a5080" stroke-width="1.5" />
-              <text x="243" y="72" text-anchor="middle" fill="#6699cc" font-size="11"
+              <text x="243" y="77" text-anchor="middle" fill="#6699cc" font-size="11"
                 font-family="DM Sans,sans-serif">Writing Doc</text>
-              <text x="243" y="85" text-anchor="middle" fill="#3a5577" font-size="9" font-family="DM Mono,monospace">기획서
-                작성</text>
 
-              <!-- In Review (highlighted) -->
               <rect x="362" y="42" width="130" height="62" rx="6" fill="#2a2040" stroke="rgba(200,240,96,0.6)"
                 stroke-width="2" />
-              <text x="427" y="66" text-anchor="middle" fill="#c8f060" font-size="11" font-family="DM Sans,sans-serif">In
-                Review</text>
-              <text x="427" y="80" text-anchor="middle" fill="#8a9940" font-size="9"
-                font-family="DM Mono,monospace">검토</text>
-              <text x="427" y="95" text-anchor="middle" fill="#6a7730" font-size="8.5"
+              <text x="427" y="69" text-anchor="middle" fill="#c8f060" font-size="11"
+                font-family="DM Sans,sans-serif">In Review</text>
+              <text x="427" y="85" text-anchor="middle" fill="#8a9940" font-size="8.5"
                 font-family="DM Mono,monospace">reviewer auto-assigned</text>
 
-              <!-- Review Approved -->
-              <rect x="550" y="54" width="140" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-              <text x="620" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
-                font-family="DM Sans,sans-serif">Review Approved</text>
-              <text x="620" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">검토
-                승인</text>
-
-              <!-- Updated Doc / Revising -->
-              <rect x="362" y="148" width="130" height="44" rx="6" fill="#2a1a1a" stroke="#803030" stroke-width="1.5" />
-              <text x="427" y="167" text-anchor="middle" fill="#f08080" font-size="11"
+              <rect x="362" y="140" width="130" height="40" rx="6" fill="#2a1a1a" stroke="#803030"
+                stroke-width="1.5" />
+              <text x="427" y="164" text-anchor="middle" fill="#f08080" font-size="11"
                 font-family="DM Sans,sans-serif">Updated Doc</text>
-              <text x="427" y="181" text-anchor="middle" fill="#7a4040" font-size="9" font-family="DM Mono,monospace">기획서
-                보강</text>
 
-              <!-- Done -->
-              <rect x="748" y="54" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
-              <text x="808" y="72" text-anchor="middle" fill="#66bb66" font-size="11"
+              <rect x="560" y="54" width="140" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="630" y="77" text-anchor="middle" fill="#66bb66" font-size="11"
+                font-family="DM Sans,sans-serif">Review Approved</text>
+
+              <rect x="750" y="54" width="120" height="38" rx="6" fill="#1a3a20" stroke="#2a6030" stroke-width="1.5" />
+              <text x="810" y="77" text-anchor="middle" fill="#66bb66" font-size="11"
                 font-family="DM Sans,sans-serif">Done</text>
-              <text x="808" y="85" text-anchor="middle" fill="#3a6a3a" font-size="9" font-family="DM Mono,monospace">작업
-                완료</text>
 
-              <!-- Arrows forward -->
               <line x1="130" y1="73" x2="176" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
               <line x1="308" y1="73" x2="360" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#a2n)" />
-              <line x1="492" y1="73" x2="548" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
-              <line x1="690" y1="73" x2="746" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
+              <line x1="492" y1="73" x2="558" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
+              <line x1="700" y1="73" x2="748" y2="73" stroke="#c8f060" stroke-width="1.5" marker-end="url(#a2g)" />
 
-              <!-- Reject down -->
-              <line x1="427" y1="104" x2="427" y2="146" stroke="#f06060" stroke-width="1.5" marker-end="url(#a2r)" />
-              <text x="438" y="132" fill="#f08080" font-size="9" font-family="DM Mono,monospace">rejected</text>
+              <line x1="427" y1="104" x2="427" y2="138" stroke="#f06060" stroke-width="1.5"
+                marker-end="url(#a2r)" />
+              <text x="436" y="126" fill="#f08080" font-size="9" font-family="DM Mono,monospace">rejected</text>
 
-              <!-- Revising back to In Review -->
-              <path d="M362,170 Q290,170 290,120 Q290,76 360,74" stroke="#f06060" stroke-width="1.5" fill="none"
-                marker-end="url(#a2r)" stroke-dasharray="4,3" />
-              <text x="262" y="135" fill="#c06060" font-size="9" font-family="DM Mono,monospace">재검토</text>
-              <text x="255" y="147" fill="#c06060" font-size="8.5" font-family="DM Mono,monospace">요청</text>
+              <!-- return leg turns below the forward arrow so the two never cross -->
+              <path d="M362,160 H346 Q340,160 340,154 V100 Q340,94 346,94 H358" stroke="#f06060" stroke-width="1.5"
+                fill="none" marker-end="url(#a2r)" stroke-dasharray="4,3" />
+              <text x="348" y="122" fill="#c06060" font-size="9"
+                font-family="DM Mono,monospace">re-review</text>
 
-              <!-- Result bar -->
-              <rect x="10" y="200" width="860" height="18" rx="3" fill="rgba(200,240,96,0.05)"
+              <rect x="10" y="210" width="860" height="18" rx="3" fill="rgba(200,240,96,0.05)"
                 stroke="rgba(200,240,96,0.18)" stroke-width="1" />
-              <text x="440" y="213" text-anchor="middle" fill="rgba(200,240,96,0.6)" font-size="9.5"
+              <text x="440" y="223" text-anchor="middle" fill="rgba(200,240,96,0.6)" font-size="9.5"
                 font-family="DM Mono,monospace">Reviewer auto-assigned on status change &middot; Review time: 5 days
                 &#8594; 2.5 days &middot; Blockers visible to all stakeholders</text>
             </svg>
@@ -1540,65 +1509,64 @@
             <li>Build quality improved as directors could act on resourcing issues earlier</li>
           </ul>
           <div class="sys-diagram">
-            <svg class="dash-svg" viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg">
+            <svg class="dash-svg" viewBox="0 0 716 224" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                   <path d="M0,0 L0,6 L8,3 z" fill="#444" />
                 </marker>
               </defs>
 
-              <!-- Labels -->
-              <text x="14" y="40" fill="rgba(200,240,96,0.55)" font-size="9" font-family="DM Mono,monospace">TIER 1
-                &middot; DIRECTOR VIEW (integrated across all teams)</text>
-              <text x="14" y="118" fill="#7788aa" font-size="9" font-family="DM Mono,monospace">TIER 2 &middot; TEAM
-                DASHBOARDS (&times;3 each team)</text>
-              <text x="14" y="188" fill="#556677" font-size="9" font-family="DM Mono,monospace">TIER 3 &middot; PLANS
-                &amp; KANBAN (all teams)</text>
+              <!-- tier labels live in their own left gutter so no connector crosses them -->
+              <text x="8" y="62" fill="rgba(200,240,96,0.55)" font-size="8"
+                font-family="DM Mono,monospace">TIER 1</text>
+              <text x="8" y="73" fill="rgba(200,240,96,0.38)" font-size="8"
+                font-family="DM Mono,monospace">DIRECTOR VIEW</text>
 
-              <!-- Director box (wide, spans all) -->
-              <rect x="14" y="46" width="592" height="40" rx="6" fill="rgba(200,240,96,0.07)"
+              <text x="8" y="138" fill="#7788aa" font-size="8" font-family="DM Mono,monospace">TIER 2</text>
+              <text x="8" y="149" fill="#556677" font-size="8" font-family="DM Mono,monospace">TEAM BOARDS</text>
+
+              <text x="8" y="203" fill="#556677" font-size="8" font-family="DM Mono,monospace">TIER 3</text>
+              <text x="8" y="214" fill="#445566" font-size="8" font-family="DM Mono,monospace">PLANS &amp; KANBAN</text>
+
+              <rect x="112" y="46" width="592" height="40" rx="6" fill="rgba(200,240,96,0.07)"
                 stroke="rgba(200,240,96,0.38)" stroke-width="1.5" />
-              <text x="310" y="64" text-anchor="middle" fill="#c8f060" font-size="11"
+              <text x="408" y="64" text-anchor="middle" fill="#c8f060" font-size="11"
                 font-family="DM Sans,sans-serif">Director Dashboards &times;3</text>
-              <text x="310" y="79" text-anchor="middle" fill="#8a9940" font-size="9.5"
+              <text x="408" y="79" text-anchor="middle" fill="#8a9940" font-size="9.5"
                 font-family="DM Mono,monospace">Workload by Assignee (Rich Filter) &middot; Milestone Toggles &middot;
                 Sprint Progress</text>
 
-              <!-- Connector from director to each team (one line down, then branches) -->
-              <line x1="310" y1="86" x2="310" y2="100" stroke="#444" stroke-width="1" />
-              <line x1="80" y1="100" x2="540" y2="100" stroke="#444" stroke-width="1" />
+              <line x1="408" y1="86" x2="408" y2="100" stroke="#444" stroke-width="1" />
+              <line x1="172" y1="100" x2="592" y2="100" stroke="#444" stroke-width="1" />
 
-              <!-- Team boxes -->
-              <rect x="14" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-              <text x="74" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">Art
-                Team</text>
-
-              <rect x="154" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-              <text x="214" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+              <rect x="112" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550"
+                stroke-width="1.5" />
+              <text x="172" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+                font-family="DM Sans,sans-serif">Art Team</text>
+              <rect x="252" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550"
+                stroke-width="1.5" />
+              <text x="312" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
                 font-family="DM Sans,sans-serif">Design Team</text>
-
-              <rect x="294" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-              <text x="354" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+              <rect x="392" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550"
+                stroke-width="1.5" />
+              <text x="452" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
                 font-family="DM Sans,sans-serif">Dev Team</text>
+              <rect x="532" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550"
+                stroke-width="1.5" />
+              <text x="592" y="145" text-anchor="middle" fill="#8899cc" font-size="11"
+                font-family="DM Sans,sans-serif">QA Team</text>
 
-              <rect x="434" y="124" width="120" height="34" rx="5" fill="#1a2030" stroke="#2a3550" stroke-width="1.5" />
-              <text x="494" y="145" text-anchor="middle" fill="#8899cc" font-size="11" font-family="DM Sans,sans-serif">QA
-                Team</text>
+              <line x1="172" y1="100" x2="172" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="312" y1="100" x2="312" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="452" y1="100" x2="452" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="592" y1="100" x2="592" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
 
-              <!-- Connectors from branch line to teams -->
-              <line x1="74" y1="100" x2="74" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-              <line x1="214" y1="100" x2="214" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-              <line x1="354" y1="100" x2="354" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
-              <line x1="494" y1="100" x2="494" y2="122" stroke="#444" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="172" y1="158" x2="172" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
+              <line x1="452" y1="158" x2="452" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
 
-              <!-- Plans / Kanban bar -->
-              <rect x="14" y="194" width="592" height="24" rx="5" fill="#181c28" stroke="#2a3040" stroke-width="1" />
-              <text x="310" y="210" text-anchor="middle" fill="#6677aa" font-size="11"
+              <rect x="112" y="194" width="592" height="24" rx="5" fill="#181c28" stroke="#2a3040" stroke-width="1" />
+              <text x="408" y="210" text-anchor="middle" fill="#6677aa" font-size="11"
                 font-family="DM Sans,sans-serif">Jira Plans &amp; Kanban Boards &middot; created for every team</text>
-
-              <!-- Connectors teams to plans -->
-              <line x1="74" y1="158" x2="74" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
-              <line x1="354" y1="158" x2="354" y2="192" stroke="#333" stroke-width="1" marker-end="url(#a3)" />
             </svg>
 
             <img
